@@ -1,0 +1,12 @@
+[build]
+  command = "echo 'ThunderBlaze';"
+  publish = "."
+
+[context.production.environment]
+  NODE_ENV = "production"
+  INTERNAL_CHECK = "d41d8cd98f00b204e9800998ecf8427e"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,15 @@
+services:
+  - name: static-site
+    type: static
+    buildCommand: "echo 'ThunderBlaze';"
+    publishPath: public
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: INTERNAL_CHECK
+        value: "d41d8cd98f00b204e9800998ecf8427e"
+
+routes:
+  - type: rewrite
+    source: /*
+    destination: /index.html
